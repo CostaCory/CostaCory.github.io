@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CostaCory - Personal Website</title>
+    <!-- Import a Japanese serif font for a more elegant look -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Noto Serif JP', "Yu Mincho", "MS Mincho", serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
+            color: #423c3c;
+            background-color: #fdf8f4; /* warm off‑white reminiscent of washi paper */
         }
         header {
-            background: #333;
-            color: #fff;
-            padding: 1rem 0;
+            background: #f7e6e4; /* sakura pink tone */
+            color: #423c3c;
+            padding: 1.5rem 0;
             text-align: center;
+            border-bottom: 2px solid #e8d5d3;
         }
         header h1 {
             margin: 0;
@@ -25,20 +28,22 @@
         nav {
             display: flex;
             justify-content: center;
-            background: #444;
+            background: #fbf2ef;
+            border-bottom: 1px solid #e8d5d3;
         }
         nav a {
-            color: #fff;
-            padding: 1rem;
+            color: #423c3c;
+            padding: 1rem 1.5rem;
             text-decoration: none;
             font-size: 1rem;
-            transition: background 0.3s ease;
+            transition: background 0.3s ease, color 0.3s ease;
         }
         nav a:hover {
-            background: #555;
+            background: #f1dedb;
+            color: #a05c5c;
         }
         .container {
-            max-width: 1200px;
+            max-width: 960px;
             margin: auto;
             padding: 2rem;
         }
@@ -47,30 +52,36 @@
         }
         .section h2 {
             margin-bottom: 1rem;
-            color: #333;
+            color: #423c3c;
+            font-weight: 700;
         }
         .about,
         .services,
         .contact {
-            background: #fff;
+            background: #ffffff;
             padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
         }
         .services-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 1.5rem;
         }
         .service-item {
-            flex: 1 1 250px;
-            background: #f1f1f1;
-            border-radius: 8px;
-            padding: 1rem;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex: 1 1 260px;
+            background: #fcf6f3;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+        .service-item:hover {
+            transform: translateY(-4px);
         }
         .service-item h3 {
             margin-top: 0;
+            color: #423c3c;
         }
         .contact form {
             display: flex;
@@ -80,30 +91,39 @@
         .contact form input,
         .contact form textarea {
             padding: 0.75rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            border: 1px solid #e0cecc;
+            border-radius: 6px;
             font-size: 1rem;
             width: 100%;
+            background: #f9f4f2;
+            color: #423c3c;
+        }
+        .contact form input:focus,
+        .contact form textarea:focus {
+            outline: none;
+            border-color: #d8b5b2;
+            background: #fffaf8;
         }
         .contact form button {
             padding: 0.75rem;
             border: none;
-            background: #333;
-            color: #fff;
-            border-radius: 5px;
+            background: #cdaaaa;
+            color: #423c3c;
+            border-radius: 6px;
             cursor: pointer;
             font-size: 1rem;
             transition: background 0.3s ease;
         }
         .contact form button:hover {
-            background: #555;
+            background: #b88f8f;
         }
         footer {
             text-align: center;
             padding: 1rem 0;
-            background: #333;
-            color: #fff;
+            background: #f7e6e4;
+            color: #423c3c;
             margin-top: 2rem;
+            border-top: 1px solid #e8d5d3;
         }
         @media (max-width: 768px) {
             nav {
