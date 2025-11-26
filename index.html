@@ -137,10 +137,30 @@
             border-top: 1px solid #e6dfd5;
             font-size: 0.9rem;
         }
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-            }
+        
+@media (max-width: 768px) {
+    /* Stack nav links vertically and center them on small screens */
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        margin-bottom: 1rem;
+    }
+    /* Add spacing between each nav link */
+    nav a {
+        margin: 0.25rem 0;
+    }
+    /* Remove the bullet separators when stacked */
+    nav a:not(:first-child)::before {
+        content: '';
+        margin-right: 0;
+    }
+    /* Stack service items vertically on small screens */
+    .services-list {
+        flex-direction: column;
+    }
+}
+
             .services-list {
                 flex-direction: column;
             }
