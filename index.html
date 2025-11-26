@@ -3,47 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CostaCory - Personal Website</title>
-    <!-- Import a Japanese serif font for a more elegant look -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <title>Mori Atelier - Personal Website</title>
+    <!-- Import Google fonts for a modern serif and sans-serif aesthetic -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
-            font-family: 'Noto Serif JP', "Yu Mincho", "MS Mincho", serif;
+            font-family: 'Noto Sans JP', sans-serif;
             line-height: 1.6;
-            color: #423c3c;
-            background-color: #fdf8f4; /* warm off‑white reminiscent of washi paper */
+            color: #2f2f2f;
+            background-color: #f7f5ef; /* light beige inspired by Nomad Inc aesthetic */
         }
         header {
-            background: #f7e6e4; /* sakura pink tone */
-            color: #423c3c;
-            padding: 1.5rem 0;
+            background: #f7f5ef;
+            color: #2f3e46;
+            padding: 1rem 0;
             text-align: center;
-            border-bottom: 2px solid #e8d5d3;
         }
         header h1 {
             margin: 0;
-            font-size: 2rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
         }
         nav {
             display: flex;
             justify-content: center;
-            background: #fbf2ef;
-            border-bottom: 1px solid #e8d5d3;
+            gap: 1.5rem;
+            background: #f1ede6;
+            padding: 0.75rem 0;
         }
         nav a {
-            color: #423c3c;
-            padding: 1rem 1.5rem;
+            color: #2f3e46;
             text-decoration: none;
-            font-size: 1rem;
-            transition: background 0.3s ease, color 0.3s ease;
+            font-size: 0.9rem;
+            position: relative;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        nav a:not(:first-child)::before {
+            content: '•';
+            color: #c3a384;
+            margin-right: 0.5rem;
         }
         nav a:hover {
-            background: #f1dedb;
-            color: #a05c5c;
+            color: #c3a384;
         }
         .container {
-            max-width: 960px;
+            max-width: 1000px;
             margin: auto;
             padding: 2rem;
         }
@@ -52,16 +58,19 @@
         }
         .section h2 {
             margin-bottom: 1rem;
-            color: #423c3c;
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #2f3e46;
             font-weight: 700;
         }
         .about,
         .services,
         .contact {
-            background: #ffffff;
+            background: #fbf9f4;
             padding: 2rem;
             border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: none;
+            border: 1px solid #e6dfd5;
         }
         .services-list {
             display: flex;
@@ -70,10 +79,10 @@
         }
         .service-item {
             flex: 1 1 260px;
-            background: #fcf6f3;
-            border-radius: 10px;
+            background: #f0eae0;
+            border-radius: 8px;
             padding: 1.5rem;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            box-shadow: none;
             transition: transform 0.2s ease;
         }
         .service-item:hover {
@@ -81,7 +90,8 @@
         }
         .service-item h3 {
             margin-top: 0;
-            color: #423c3c;
+            font-family: 'Playfair Display', serif;
+            color: #2f3e46;
         }
         .contact form {
             display: flex;
@@ -91,39 +101,41 @@
         .contact form input,
         .contact form textarea {
             padding: 0.75rem;
-            border: 1px solid #e0cecc;
+            border: 1px solid #d8d2c7;
             border-radius: 6px;
             font-size: 1rem;
             width: 100%;
-            background: #f9f4f2;
-            color: #423c3c;
+            background: #f6f2eb;
+            color: #2f2f2f;
         }
         .contact form input:focus,
         .contact form textarea:focus {
             outline: none;
-            border-color: #d8b5b2;
-            background: #fffaf8;
+            border-color: #c3a384;
+            background: #fefaf4;
         }
         .contact form button {
             padding: 0.75rem;
             border: none;
-            background: #cdaaaa;
-            color: #423c3c;
+            background: #c3a384;
+            color: #ffffff;
             border-radius: 6px;
             cursor: pointer;
             font-size: 1rem;
             transition: background 0.3s ease;
+            font-family: 'Noto Sans JP', sans-serif;
         }
         .contact form button:hover {
-            background: #b88f8f;
+            background: #a58f6f;
         }
         footer {
             text-align: center;
             padding: 1rem 0;
-            background: #f7e6e4;
-            color: #423c3c;
+            background: #f1ede6;
+            color: #2f3e46;
             margin-top: 2rem;
-            border-top: 1px solid #e8d5d3;
+            border-top: 1px solid #e6dfd5;
+            font-size: 0.9rem;
         }
         @media (max-width: 768px) {
             nav {
@@ -133,17 +145,56 @@
                 flex-direction: column;
             }
         }
+
+        /* Hero section */
+        .hero {
+            /* Use the uploaded lamp image as the hero background with a subtle overlay to maintain text readability */
+            background: linear-gradient(rgba(247, 245, 239, 0.8), rgba(247, 245, 239, 0.8)), url('Gemini_Generated_Image_qqh6ooqqh6ooqqh6.png');
+            background-size: cover;
+            background-position: center;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #2f3e46;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        .hero p {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 1.25rem;
+            color: #4a4a4a;
+            max-width: 700px;
+            margin: 0 auto;
+        }
     </style>
+
+    <!-- Google Analytics (replace G-XXXXXXXXXX with your Measurement ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);} // Define gtag function
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
 </head>
 <body>
     <header>
-        <h1>Welcome to CostaCory's Website</h1>
+        <h1>Mori Atelier</h1>
+        <!-- Japanese tagline below the site title -->
+        <p style="margin-top: 0.25rem; font-family: 'Noto Sans JP', sans-serif; font-size: 1.1rem; color: #2f3e46;">静かに、つくる。</p>
     </header>
     <nav>
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
     </nav>
+    <div class="hero">
+        <h1>Welcome to Mori Atelier</h1>
+        <p>Merging technology, trading, and 3D printing with a modern aesthetic.</p>
+    </div>
     <main class="container">
         <section id="about" class="section about">
             <h2>About Me</h2>
@@ -178,7 +229,7 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 CostaCory. All rights reserved.</p>
+        <p>&copy; 2025 Mori Atelier. All rights reserved.</p>
     </footer>
 </body>
 </html>
